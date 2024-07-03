@@ -93,6 +93,11 @@ def update_cart(request, **kwargs):
 @permission_classes([isClient])
 def order(request):
     print(request.user)
+    print(1)
+    print(1)
+    print(1)
+    print(1)
+    print(1)
     if request.method == "GET":
         order = Order.objects.filter(user=request.user)
         return Response({"data": OrderSerializer(order, many=True).data}, status=status.HTTP_200_OK)

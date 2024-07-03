@@ -38,6 +38,11 @@ def signup(request, *args, **kwargs):
 @permission_classes([IsAuthenticated])
 def logout(request):
     if request.user.is_active:
+        print(1)
+        print(1)
+        print(1)
+        print(1)
+        print(1)
         request.user.auth_token.delete()
         return Response({"logout"}, status=status.HTTP_200_OK)
     return Response({"error": {"code": 401, "message": "Login failed"}},
