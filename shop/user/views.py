@@ -38,7 +38,12 @@ def signup(request, *args, **kwargs):
 @permission_classes([IsAuthenticated])
 def logout(request):
     if request.user.is_active:
-        print(1)
+        print(2)
+        print(2)
+        print(2)
+        print(2)
+        print(2)
+        print(2)
         print(1)
         print(1)
         print(1)
